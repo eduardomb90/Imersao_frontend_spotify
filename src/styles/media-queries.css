@@ -1,0 +1,24 @@
+@media screen and (min-width: 1015px) {
+    .image-container .image__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .image-container .image__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1470px) {
+    .image-container .image__list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    .image-container .image__list {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+}

@@ -2,7 +2,6 @@
 
 .main-container {
     max-width: 80vw;
-    height: 100vh;
     margin-left: 395px;
     margin-right: 56px;
 }
@@ -27,7 +26,8 @@
     margin-right: 1.25rem;
 }
 
-.arrow-left, .arrow-right {
+.arrow-left,
+.arrow-right {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,3 +92,248 @@
     font-weight: 700;
     border-radius: 40px;
 }
+
+/* PLAYLIST */
+
+.playlist-container {
+    max-width: 80vw;
+    margin-left: 395px;
+    margin-right: 56px;
+}
+
+.playlist-container #result-playlists {
+    height: 68vh;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #121212;
+    padding: 16px;
+}
+
+.playlist-container .playlist__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.playlist__text #greeting {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.playlist__text .subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* SCROLL */
+.offer__scroll-container {
+    max-height: 43vh;
+    margin: 24px;
+    overflow-y: auto;
+}
+
+.offer__scroll-container::-webkit-scrollbar {
+    width: 1px;
+}
+
+.offer__scroll-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+/* FIM SCROLL */
+
+.image-container .image__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-gap: 10px;
+    padding: 10px;
+    margin-top: 40px;
+
+}
+
+.image-container .cards {
+    position: relative; /* relative: Comportamento em relação a si mesmo: O elemento é posicionado em relação à sua posição original.
+                          Mantém espaço original: O espaço original que o elemento ocuparia não é alterado, mas você pode movê-lo com top, right, bottom ou left. */
+    width: 220px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.cards span {
+    padding: 16px;
+    position: absolute;
+    /* absolute: Comportamento em relação ao ancestral posicionado mais próximo ou ao elemento raiz (se nenhum ancestral estiver posicionado).
+                 Remove do fluxo normal: O elemento é removido do fluxo normal do documento, o que significa que outros elementos agem como se o elemento não estivesse presente. */
+    color: var(--text-base-light);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.cards img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: 107px;
+    transform: rotate(25deg) translate(18%, -2%);
+}
+
+/* COLOR CARDS */
+.card1 {
+    background-color: var(--card1);
+}
+.card2 {
+    background-color: var(--card2);
+}
+.card3 {
+    background-color: var(--card3);
+}
+.card4 {
+    background-color: var(--card4);
+}
+.card5 {
+    background-color: var(--card5);
+}
+.card6 {
+    background-color: var(--card6);
+}
+.card7 {
+    background-color: var(--card7);
+}
+.card8 {
+    background-color: var(--card8);
+}
+.card9 {
+    background-color: var(--card9);
+}
+.card10 {
+    background-color: var(--card10);
+}
+.card11 {
+    background-color: var(--card11);
+}
+.card12 {
+    background-color: var(--card12);
+}
+.card13 {
+    background-color: var(--card13);
+}
+.card14 {
+    background-color: var(--card14);
+}
+.card15 {
+    background-color: var(--card15);
+}
+
+/* FIM COLOR CARDS */
+
+/* CARD ARTISTA */
+
+.hidden {
+    display: none;
+}
+
+.grid-container {
+    max-width: 80vw;
+    margin-left: 395px;
+    margin-right: 56px;
+    grid-gap: var(--grid-gap);
+    display: grid;
+    grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
+    min-width: var(--min-container-width);
+}
+
+.artist-card {
+    background: #181818;
+    border-radius: 8px;
+    -ms-flex: 1;
+    flex: 1;
+    isolation: isolate;
+    padding: 16px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.artist-card:hover {
+    background-color: #252525;
+}
+
+.card-img {
+    padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.artist-img {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-height: 62px;
+}
+
+.card-text a {
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.artist-name {
+    box-sizing: border-box;
+    margin-block: 0px;
+    font-size: 16px;
+    font-weight: 700;
+    padding-block-end: 8px;
+}
+
+.artist-categorie {
+    color: #6a6a6a;
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.play {
+    position: relative;
+}
+
+.play .fa-play {
+    position: absolute;
+    right: 10px;
+    top: 120px;
+    padding: 18px;
+    background-color: #1db954;
+    border-radius: 100%;
+    font-size: 14px;
+    opacity: 0;
+    transition: all ease 0.4s;
+}
+
+.artist-card:hover .play .fa-play {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.play .fa-play:hover {
+    padding: 20px;
+    cursor: pointer;
+}
+
+#result-artist {
+    padding: 20px 40px;
+}
+  /* FIM CARD ARTISTA */
